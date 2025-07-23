@@ -35,6 +35,30 @@ export default function JpPage() {
       </div>
 
       <div style={{ marginTop: '2rem' }}>
+        <h2>日本の国旗PNG（相対パス: /images/hata_kokki_flag_japan.png）</h2>
+        <p>URL: /images/hata_kokki_flag_japan.png</p>
+        <Image
+          src="/images/hata_kokki_flag_japan.png"
+          alt="日本の国旗PNG"
+          width={300}
+          height={200}
+          priority
+        />
+      </div>
+
+      <div style={{ marginTop: '2rem' }}>
+        <h2>日本の国旗PNG（環境変数使用: ${`\{process.env.NEXT_PUBLIC_ASSET_PREFIX\}/images/hata_kokki_flag_japan.png`}）</h2>
+        <p>URL: {process.env.NEXT_PUBLIC_ASSET_PREFIX}/images/hata_kokki_flag_japan.png</p>
+        <Image
+          src={`${process.env.NEXT_PUBLIC_ASSET_PREFIX}/images/hata_kokki_flag_japan.png`}
+          alt="日本の国旗PNG（環境変数）"
+          width={300}
+          height={200}
+          priority
+        />
+      </div>
+
+      <div style={{ marginTop: '2rem' }}>
         <h2>外部画像（絶対URL: https://placehold.jp/）</h2>
         <p>URL: https://placehold.jp/3d4070/ffffff/300x200.png?text=%E6%97%A5%E6%9C%AC%E7%89%88</p>
         <Image
